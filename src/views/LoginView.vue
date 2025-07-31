@@ -58,7 +58,7 @@ async function login() {
     });
     const token = res.data.token || JSON.parse(res.data).token;
     saveToken(token);
-    router.push('/users');
+    router.push('/dashboard');
   } catch (e) {
     error.value = 'Falha no login. Verifique suas credenciais.';
   }
