@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import LoginView from '../views/LoginView.vue';
 import RegisterView from '../views/RegisterView.vue';
 import UsersView from '../views/UsersView.vue';
+import HomeView from '../views/HomeView.vue';
 import { getToken } from '../auth';
 
 const routes = [
@@ -12,6 +13,11 @@ const routes = [
     path: '/users',
     component: UsersView,
     meta: { requiresAuth: true },
+  },
+  {
+    path: '/home',
+    component: HomeView,
+    meta: { requiresAuth: true }
   },
 ];
 
